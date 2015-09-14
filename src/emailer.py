@@ -1,8 +1,12 @@
 import fileWriter
 
-
+#kteq-pinger's email address
 FROM_ADDRESS = "whatever"
+
+#REPLACE "julian.brackins" with whomever is the current Station Engineer.
 TO_ADDRESS = ["kteq@mines.sdsmt.edu", "julian.brackins@mines.sdsmt.edu"]
+
+EMAIL_SUBJECT = "KTEQ-PINGER SAYS: KTEQ STREAM IS DOWN :'("
 
 class email:
     def __init__(self, debug=False):

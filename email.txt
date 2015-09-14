@@ -1,2 +1,17 @@
-This is the sample email that will be sent out.
-Modify this plaintext document to generate the message.
+IF YOU'RE READING THIS EMAIL, DON'T PANIC. I'm currently setting up an emailer to send out a message if KTEQ is down, so these emails are probably actually NOT real at the moment.... Everything's cool, everything's cool don't worry. Well, you could check the stream right now JUST IN CASE, but hey.
+
+
+------------------------------------------------
+
+Attention KTEQ Management:
+The KTEQ Stream located at http://kteq-streamer.sdsmt.edu:8000/status.xsl is DOWN RIGHT NOW!!!
+
+This is REALLY BAD. Get that stuff back up and running so everyone can rock on on whatever.
+
+Sincerly,
+KTEQ-Pinger
+
+------------------------------------------------
+
+
+This is an automated message sent through the kteq-pinger project developed by J. Anthony Brackins, The KTEQ Station Engineer. The kteq-pinger source code can be found at https://github.com/jbrackins/kteq-pinger.
