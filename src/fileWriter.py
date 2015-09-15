@@ -1,13 +1,14 @@
+from datetime import datetime
 
-PATH = "../"
+PATH = "/home/pi/kteq-pinger/"
 FILENAME = "streamStatus.txt"
 EMAIL_GOOD = "emailGood.txt"
 EMAIL_BAD = "emailBad.txt"
 
 def update(msg):
         #update streamStatus.txt
-        f = open( PATH + FILENAME , 'w')
-        f.write( msg + "\n" )
+        f = open( PATH + FILENAME , 'w+')
+        f.write( msg + timestamp() + "\n" )
         f.close
         return
 
@@ -19,3 +20,6 @@ def getEmail(streamUP = False):
     with open( PATH + email , 'r') as content_file:
         content = content_file.read()
     return content
+
+def timestamp():
+    return " @ " + str(datetime.now())

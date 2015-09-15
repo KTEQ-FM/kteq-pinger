@@ -52,9 +52,4 @@ if __name__ == "__main__":
     s = scheduler(True)
 
     while True:
-        try:
-            s.run()
-        except KeyboardInterrupt:
-            print "closing"
-            exit(0)
-
+        s.run()
