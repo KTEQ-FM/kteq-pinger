@@ -1,7 +1,7 @@
 import os
 import subprocess as sub
 import urllib2
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from HTMLParser import HTMLParser
 
 
@@ -10,7 +10,7 @@ STREAM_URL = "http://kteq-streamer.sdsmt.edu:8000/status.xsl"
 def ping(debug=False):
     # Check the Stream
     page = urllib2.urlopen( STREAM_URL )
-    soup = BeautifulSoup(page)
+    soup = BeautifulSoup(page, "lxml")
 
     # Check to see if "streamdata" exists
     data = soup.findAll('td', attrs={"class" : "streamdata" })
