@@ -16,10 +16,11 @@ class email:
     def __init__(self, debug=False):
         self.fromAddr = FROM_ADDRESS
         self.toAddr = TO_ADDRESS
-        self.msg = ""
-        self.smtp = smtplib.SMTP('smtp.gmail.com', 587)
+        self.msg = fileWriter.getEmail(False)
+#        self.smtp = smtplib.SMTP('smtp.gmail.com:587')
 
     def sendEmail(self, streamUP = False ):
+        mailer = smtplib.SMTP('smtp.gmail.com',587)
         #Sending email stuff goes here
         to = ""
         for name in TO_ADDRESS:
@@ -31,13 +32,13 @@ class email:
         else:
             header = header + EMAIL_SUBJECT[0]
             self.msg = fileWriter.getEmail(False)
-        self.smtp.ehlo()
-        self.smtp.starttls()
-        self.smtp.ehlo()
+        mailer.ehlo()
+        mailer.starttls()
+        mailer.ehlo()
 
-        self.smtp.login(FROM_ADDRESS, FROM_PASS)
-        self.smtp.sendmail(FROM_ADDRESS, to, header + "\n" + self.msg)
-        self.smtp.quit()
+        mailer.login(FROM_ADDRESS, FROM_PASS)
+        mailer.sendmail(FROM_ADDRESS, to, header + "\n" + self.msg)
+        mailer.quit()
         return
 
     def getMessage(self):
@@ -49,6 +50,6 @@ if __name__ == "__main__":
     for email in e.toAddr:
         print email,
     print ":"
-    print e.getMessage()    
+    print e.getMessage(True)    
     e.sendEmail()
     

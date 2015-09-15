@@ -34,10 +34,13 @@ class scheduler:
         else:
             msg = "Stream is Down"
             #Raise flag to fix stream
-            self.fixStream = True
             #Send Email notifying stream
             #is down
-            self.post(False)
+            if self.fixStream:
+                pass
+            else:
+                self.post(False)
+            self.fixStream = True
         if self.DEBUG: 
             print msg
         fileWriter.update(msg)
@@ -49,7 +52,7 @@ class scheduler:
         return
 
 if __name__ == "__main__":
-    s = scheduler(True)
-
+    s = scheduler(False)
+    time.sleep(60)
     while True:
         s.run()
