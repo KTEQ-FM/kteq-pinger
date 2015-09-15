@@ -1,4 +1,7 @@
 src/password.py
+emailGood.txt
+emailBad.txt
+streamStatus.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
