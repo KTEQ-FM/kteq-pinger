@@ -1,0 +1,14 @@
+------------------------------------------------
+
+Attention KTEQ Management:
+The KTEQ Stream located at http://kteq-streamer.sdsmt.edu:8000/status.xsl is BACK UP!!!!
+
+PARTY TIME!!!!!!! :D
+
+Sincerly,
+KTEQ-Pinger
+
+------------------------------------------------
+
+
+This is an automated message sent through the kteq-pinger project developed by J. Anthony Brackins, The KTEQ Station Engineer. The kteq-pinger source code can be found at https://github.com/jbrackins/kteq-pinger.
